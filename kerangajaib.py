@@ -14,7 +14,7 @@ def kerangajaib():
 
     a = 10
     b = 29
-    m = 31
+    c = 31
     
     count = 0
     loop = True
@@ -23,7 +23,7 @@ def kerangajaib():
         if (count >= 7 and (0 <= result <= (length-1))):        
             loop = False
         else:                                   
-            result = ((now*a)+b)%m
+            result = ((now*a)+b)%c
             now = result                    
             count +=1
         
