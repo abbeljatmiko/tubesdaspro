@@ -12,5 +12,5 @@ Identitas Kelompok :
 16521416	Abbel Jatmiko
 -------------------------
 
-# Spesifikasi Program
-Terdapat kebutuhan fungsional wajib yang diperlukan oleh BNMO, seperti yang tertera di bawah. Tampilan atau interface dari sistem dibebaskan, silahkan berkreasi; output tidak harus persis seperti contoh, yang penting spesifikasi terpenuhi. Kreativitas interface akan menjadi pertimbangan penilaian. Perlu diperhatikan bahwa yang menjadi penekanan bukan pada alur jalannya program, melainkan pada validasi yang dilakukan.
+# Deskripsi Persoalan
+BNMO (dibaca: Binomo) adalah sebuah robot game milik Indra dan Doni yang membantu mereka melepas stress ketika mendapatkan tugas selama di Institut Teknologi Bandung. BNMO dulunya memiliki sistem inventarisasi & toko game yang baik. Indra dan Doni menjalani kuliah 2 semester di ITB dan merasa kesulitan dan stress. Doni menghabiskan waktu dengan BNMO untuk bermain game. Namun, Indra lebih suka bersenang-senang bermain gacha, akan tetapi ia rugi terus. Sehingga, pada suatu saat, Indra membanting BNMO sehingga BNMO pun rusak. Doni merasa depresi saat ia tahu BNMO rusak. Doni pun segera memperbaiki BNMO dan ia pun meminta bantuan kalian untuk memperbaiki BNMO karena Doni tidak cukup ahli dalam ngoding. 
