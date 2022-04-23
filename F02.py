@@ -14,7 +14,7 @@ def UserNameValid(username) :
 def CekUserNameRegister(username) :
     #Fungsi yang memvalidasi username yang diregister
     for i in username :
-        if (splitFunc(i)[1] != username) : 
+        if (splitFunc(i)[1] != username): 
             T = ord(i)
             if 97<=T<=122 or 65<=T<=90 or 48<=T<=57 or T == 95 or T == 45 : 
                 return True 
@@ -34,3 +34,4 @@ def register() :
             elif CekUserNameRegister(register_username) == False :
                 print("Username hanya dapat mengandung alfabet A-Z, a-z, underscore “_”, strip “-”, dan angka 0-9.")
                 berhasil = False
+        return berhasil

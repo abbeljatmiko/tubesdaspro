@@ -1,6 +1,6 @@
-def help() :
+def help(role) :
         print ("============ HELP ============")
-        if cekrole() == "admin" :
+        if role == "admin" :   # role sebagai admin
             print("1. register - Untuk melakukan registrasi user baru")
             print("2. login - Untuk melakukan login ke dalam sistem")
             print("3. tambah_game - Untuk menambah game yang dijual pada toko")
@@ -13,7 +13,7 @@ def help() :
             print("10. save - Untuk melakukan penyimpanan data ke dalam file setelah dilakukan perubahan")
             input ()
 
-        elif cekrole() == "user" : #jika role sebagai user
+        elif role == "user" : #jika role sebagai user
             print("1. login - Untuk melakukan login ke dalam sistem")
             print("2. list_game_toko - Untuk listing game di Toko Berdasarkan ID, Tahun Rilis, dan Harga")
             print("3. buy_game - Untuk membeli game")

@@ -4,7 +4,7 @@ def tambah_game(dfgame):
     nama = input("Masukkan nama game: ")
 
     def sudahAda(dfgame, nama):
-        cek = False                             #variabel cek memperlihatkan game sudah ada di toko BNMO atau belum
+        cek = False                             
         for i in range(length(dfgame)):
             if (dfgame[i][1] == nama):
                 cek = True
@@ -33,7 +33,6 @@ def tambah_game(dfgame):
                 harga = input("Masukkan harga: ")
                 stok = input("Masukkan stok awal: ")
         
-        if (nama != "" and kategori != "" and tahun != "" and harga != "" and stok != ""):
-            print("Selamat! Berhasil menambahkan game", (nama))
+        
 
         

@@ -53,36 +53,59 @@ filekepemilikan = open(str(f) + "\\" + "kepemilikan.csv","r")
 bacafilekepemilikan = filekepemilikan.readlines()
 filekepemilikan.close()
 
+dfuser = csv_to_array(fileuser)
+dfgame = csv_to_array(filegame)
+dfriwayat = csv_to_array(fileriwayat)
+dfkepemilikan = csv_to_array(filekepemilikan)
 
 
 end = False
 
 while end == False:
-    command = input(">>>").lower()
+    role = "TidakAda"
     log = False
-    admin = False
+    command = input(">>>").lower()
+    
+
     if command == "login":
-        print("====")
-    elif command == "tambah_game":
-        tambah_game()
-    elif command == "ubah_game":
-        ubah_game()
-    elif command == "ubah_stok":
-        ubah_stok()
-    elif command == "list_game_toko":
-        list_game_toko()
-    elif command == "buy_game":
-        buy_game()
-    elif command == "list_game":
-        list_game()
-    elif command == "search_my_game":
-        search_my_game()
-    elif command == "search_game_at_store":
-        search_game_at_store()
-    elif command == "topup":
-        topup()
-    elif command == "riwayat":
-        riwayat()
+        username = input("Masukkan username: ")
+        password = input("Masukkan password: ")
+        found = False                               # Variabel found digunakan untuk menentukan apakah username ketemu pada user.csv
+        i = 0
+        
+        while found == False:                      
+            if dfuser[i][1] == username and dfuser[i][3] == password:            # Jika sudah ketemu maka variabel found akan menjadi True sehingga loop berhenti
+                found = True
+                role = "user"
+            
+            else:
+                i += 1                              # Jika belum ketemu maka akan dilanjutkan pencarian ke row selanjut nya pada kolom username
+            
+            if i == (length(dfuser) - 1) and found == False:
+                print("Password atau username salah atau tidak ditemukan.")
+
+        if command == "register":
+            register()
+        elif command == "tambah_game":
+            tambah_game()
+        elif command == "ubah_game":
+            ubah_game()
+        elif command == "ubah_stok":
+            ubah_stok()
+        elif command == "list_game_toko":
+            list_game_toko()
+        elif command == "buy_game":
+            buy_game()
+        elif command == "list_game":
+            list_game()
+        elif command == "search_my_game":
+            search_my_game()
+        elif command == "search_game_at_store":
+            search_game_at_store()
+        elif command == "topup":
+            topup()
+        elif command == "riwayat":
+            riwayat()
     elif command == "help":
         help()
 

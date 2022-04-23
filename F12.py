@@ -4,26 +4,26 @@ def topup(dfuser):
     
     username = input("Masukkan username: ")
     try:                                                            
-        saldo = float(input("Masukkan saldo: "))
-        
-        check = False                                           # Inisialisasi validasi user
-        for i in range(1, length(dfuser)):                   
-            if username == (dfuser[i][1]):                      # User tervalidasi
-                saldoakhir = float(dfuser[i][5])                  # data saldo user diubah menjadi integer
-                saldoakhir += saldo                             # operasi penambahan/pengurangan saldo
-                if saldoakhir < 0:                              # saldo berupa negatif
+        saldo = int(input("Masukkan saldo: "))              # Kondisikan bahwa saldo dalam bentuk bilangan bulat bukan riil
+        cek = False             
+
+        for i in range(1, length(dfuser)):                  
+            if username == (dfuser[i][1]):                  # Cek apakah username terdapat dalam user.csv 
+                newSaldo = int(dfuser[i][5])                  
+                newSaldo += saldo                             
+                if newSaldo < 0:                              
                     print("Masukan tidak valid")
                 else:
-                    dfuser[i][5] = str(saldoakhir)              # saldoakhir diubah lagi menjadi string
+                    dfuser[i][5] = str(newSaldo)              
                     if (saldo >= 0):
-                        print("Top up berhasil. Saldo", dfuser[i][2],"bertambah menjadi "+str(saldoakhir)+".")       # Bila ditambahkan
+                        print("Top up berhasil. Saldo", dfuser[i][2],"bertambah menjadi "+str(newSaldo)+".")       
                     else :
-                        print("Top up berhasil. Saldo", dfuser[i][2],"berkurang menjadi "+str(saldoakhir)+".")       # Bila dikurangi
-                check = True                                    # Nama user tersedia di user.csv
-                break                                           # ketika sudah selesai maka loop dihentikan
+                        print("Top up berhasil. Saldo", dfuser[i][2],"berkurang menjadi "+str(newSaldo)+".")       
+                cek = True                                    
+                break                                           
 
-        if not check:                                           # user tidak tersedia di user.csv
-            print("Username '"+username+"' tidak ditemukan.")
+        if not cek:
+            print("Username "+ username +" tidak ditemukan.")
     except :
         print("Input tersebut tidak diterima.")
     return dfuser

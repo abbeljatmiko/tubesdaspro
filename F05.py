@@ -24,8 +24,3 @@ def ubah_game(datagame):
             datagame[idgame][i+1] = isidata[i]
 
     return datagame
-
-data_game = csv_to_array(r"C:\Users\indra\PycharmProjects\noobman\tubes\game.csv")
-
-print(data_game)
-print(ubah_game(data_game))

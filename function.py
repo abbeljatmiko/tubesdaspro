@@ -3,7 +3,6 @@ def length(listx):
     global length
     for i in listx:
         n += 1
-    
     return n
 
 
@@ -274,3 +273,4 @@ def get_data(file) :
         data=data+[convert_string(i)]
     return data
 
+def array_to_csv()

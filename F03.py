@@ -39,4 +39,5 @@ def Login():
         return loggeduser, successful # Memberikan nama username, serta validasi logged in (successful optional)
     else: #(successful == False):
         print('Password atau username salah atau tidak ditemukan.')
-        return successful == False # Belum logged-in.
+        successful == False
+        return successful # Belum logged-in.
