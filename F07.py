@@ -1,6 +1,6 @@
 from function import *
 
-def list_game(data) :
+def list_game_toko(data) :
     skema=input("Skema sorting : ")
     jenis=skema[:-1]
     keterangan=skema[-1:]
@@ -21,7 +21,7 @@ def list_game(data) :
                         (list[i],list[j])=swap(list[i],list[j])
             print_data(list)
         else :
-            print("Skea sorting tidak valid")
+            print("Skema sorting tidak valid")
         
     elif(jenis=="harga") :
         if(keterangan=='+') :
@@ -37,7 +37,7 @@ def list_game(data) :
                         (list[i],list[j])=swap(list[i],list[j])
             print_data(list)
         else :
-            print("Skea sorting tidak valid")
+            print("Skema sorting tidak valid")
     elif(jenis=='') :
         for i in range(1,len) :
                 for j in range(i,len) :
@@ -46,5 +46,5 @@ def list_game(data) :
         print_data(list)
     else :
         print("Skema sorting tidak valid!")
-list_game(get_data("game.csv"))
+list_game_toko(get_data("game.csv"))
 

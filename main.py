@@ -1,7 +1,5 @@
-from ast import Assign
-from function import *
 from kerangajaib import kerangajaib
-from F02 import *c
+from F02 import *
 from F03 import *
 from F04 import *
 from F05 import *
@@ -72,7 +70,7 @@ while end == False:
     elif command == "ubah_stok":
         ubah_stok()
     elif command == "list_game_toko":
-        list_game_toko() (F07)
+        list_game_toko()
     elif command == "buy_game":
         buy_game()
     elif command == "list_game":
