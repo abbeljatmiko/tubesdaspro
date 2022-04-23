@@ -4,7 +4,7 @@ from function import *
 def kerangajaib():
 
     jawaban = ["Iya", "Tidak", "Yooo ndak tahu kok tanya saya", "sabeb", "masa sihh", "mau", "ah gatau males pengen beli truk", "yakali", "o aja", 
-            "gantengg", "tanya aja ke tembok", "naon yakkk"]
+            "gantengg", "tanya aja ke tembok", "di Jakarta", "maybe in your dream", "kerenn pisann maneh"]
     length = length(jawaban)
 
     input("Apa pertanyaanmu? ")

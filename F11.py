@@ -27,5 +27,5 @@ def search_game_at_store(datagame):
 a = input(">>>")
 
 if a == "search_game_at_store":
-    lihatgame(csv_to_array(r'C:\Users\indra\PycharmProjects\noobman\tubes\game.csv'))
+    search_game_at_store(csv_to_array(r'C:\Users\indra\PycharmProjects\noobman\tubes\game.csv'))
     print(">>>")

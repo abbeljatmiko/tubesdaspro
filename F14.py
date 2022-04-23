@@ -1,4 +1,4 @@
-def help () :
+def help() :
         print ("============ HELP ============")
         if cekrole() == "admin" :
             print("1. register - Untuk melakukan registrasi user baru")

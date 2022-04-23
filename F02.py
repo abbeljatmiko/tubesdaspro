@@ -1,6 +1,6 @@
 from function import *
 
-def UserNameValid (username) :
+def UserNameValid(username) :
     #Fungsi yang mengecek apakah username sudah terpakai atau belom
     #True jika username tidak pernah digunakan
     #False jika username sudah tersedia
@@ -21,7 +21,7 @@ def CekUserNameRegister(username) :
     return False
 
 
-def register () :
+def register() :
         register_nama = input("Masukan nama: ")
         register_username = input("Masukan username: ")
         password = input("Masukan password: ")
@@ -30,5 +30,7 @@ def register () :
         else :
             if CekUserNameRegister(register_username) == True : 
                 print("Username " + register_username + " telah berhasil register ke dalam Binomo")
+                berhasil = True
             elif CekUserNameRegister(register_username) == False :
                 print("Username hanya dapat mengandung alfabet A-Z, a-z, underscore “_”, strip “-”, dan angka 0-9.")
+                berhasil = False
