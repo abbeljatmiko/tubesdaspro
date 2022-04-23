@@ -11,7 +11,7 @@ def ubah_stok(dfgame):
             found = True
         
         else:
-            i += 1cd "C:"
+            i += 1
     
     if found == True:                           # Jika terdapat ID game dalam game.csv
         stok = int(dfgame[i][5])                # Stok terdapat pada kolom ke 4 dalam game.csv
@@ -22,7 +22,7 @@ def ubah_stok(dfgame):
             print("Stok game " + dfgame[i][1] + " berhasil ditambahkan. Stok sekarang: " + stok)
     
         elif (newStok < 0):                     # Jika ingin mengurangi stok harus dilihat apakah jumlah yang ingin dikurang menyebabkan stok sekarang menjadi negatif atau tidak
-            if stok < newStok:
+            if stok < (newStok*(-1)):
                 print("Stok game " + dfgame[i][1] + " gagal dikurangi karena stok kurang. Stok sekarang: " + stok)
             else:
                 stok += newStok

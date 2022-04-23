@@ -10,7 +10,7 @@ def tambah_game(dfgame):
                 cek = True
         return cek
 
-    if (sudahAda(dfgame, nama)):
+    if (sudahAda(dfgame, nama) == True):
         print("Game", nama, "sudah ada di toko!")
 
     else:
@@ -33,6 +33,7 @@ def tambah_game(dfgame):
                 harga = input("Masukkan harga: ")
                 stok = input("Masukkan stok awal: ")
         
-        
+        if (nama != "" and kategori != "" and tahun != "" and harga != "" and stok != ""):
+            print("Selamat! Berhasil menambahkan game", (nama))
 
         
