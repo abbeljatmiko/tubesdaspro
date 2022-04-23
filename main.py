@@ -1,4 +1,4 @@
-from kerangajaib import kerangajaib
+from kerangajaib import *
 from F02 import *
 from F03 import *
 from F04 import *
@@ -15,7 +15,7 @@ from F14 import *
 from F15 import *
 from F16 import *
 from F17 import *
-
+from function import *
 import argparse
 import os 
 
@@ -85,8 +85,7 @@ while end == False:
         riwayat()
     elif command == "help":
         help()
-    elif command == "save":
-        save()
+
     elif command == "exit":
         exit()
     elif command == "kerangajaib":

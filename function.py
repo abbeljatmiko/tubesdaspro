@@ -1,8 +1,12 @@
 def length(listx):
     n = 0
+    global length
     for i in listx:
         n += 1
+    
     return n
+
+
 
 def sortlist(x):
     for i in range(length(x) -1):
@@ -270,5 +274,3 @@ def get_data(file) :
         data=data+[convert_string(i)]
     return data
 
-def swap(x,y):
-    panjang = length(get_data())

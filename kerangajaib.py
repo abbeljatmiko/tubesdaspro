@@ -28,5 +28,3 @@ def kerangajaib():
             count +=1
         
     print(jawaban[result])
-
-kerangajaib()
