@@ -1,10 +1,5 @@
 from function import *
-a = input(">>>")
 
-data_kepemilikan = csv_to_array(r"C:\Users\indra\PycharmProjects\noobman\tubes\kepemilikan.csv")
-data_game = csv_to_array(r"C:\Users\indra\PycharmProjects\noobman\tubes\game.csv")
-data_user = csv_to_array(r"C:\Users\indra\PycharmProjects\noobman\tubes\user.csv")
-data_riwayat = csv_to_array(r"C:\Users\indra\PycharmProjects\noobman\tubes\riwayat.csv")
 
 
 def buy_game(userid, kepemilikan, datagame, riwayat, datauser ):
@@ -40,7 +35,7 @@ def buy_game(userid, kepemilikan, datagame, riwayat, datauser ):
 
         print(f'Game "{nama_game}" telah berhasil dibeli!')
 
-    return datauser, kepemilikan, riwayat
+    return datauser, kepemilikan, riwayat, datagame
 
 
 def cek_punya(kepemilikan, userid, gameid):
@@ -49,11 +44,3 @@ def cek_punya(kepemilikan, userid, gameid):
             if data[1] == userid:
                 return True
     return False
-
-user_id = 2
-if a == "buy_game":
-    data_temp = buy_game(user_id, data_kepemilikan, data_game, data_riwayat, data_user)
-    data_user = data_temp[0]
-    data_kepemilikan = data_temp[1]
-    data_riwayat = data_temp[2]
-    print(">>>")

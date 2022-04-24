@@ -272,5 +272,3 @@ def get_data(file) :
     for i in f :
         data=data+[convert_string(i)]
     return data
-
-def array_to_csv()

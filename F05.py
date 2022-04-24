@@ -1,5 +1,4 @@
 from function import *
-
 def ubah_game(datagame):
 
     #menginput data game yang akan diubah

@@ -1,25 +1,23 @@
 from function import *
 
-def UserNameValid(username) :
+def UserNameValid(username,dfuser) :
     #Fungsi yang mengecek apakah username sudah terpakai atau belom
     #True jika username tidak pernah digunakan
     #False jika username sudah tersedia
-    UsernameTerpakai = False
     i = 0
-    while i < length(username) :
-        if username == splitFunc("user.csv")[1] :
-            UserNameTerpakai = True
-        i+1
+    while i < length(dfuser) :
+        if username == dfuser[i][1]:
+            return True
+        i += 1
+    return False
 
 def CekUserNameRegister(username) :
     #Fungsi yang memvalidasi username yang diregister
     for i in username :
-        if (splitFunc(i)[1] != username): 
-            T = ord(i)
-            if 97<=T<=122 or 65<=T<=90 or 48<=T<=57 or T == 95 or T == 45 : 
-                return True 
-    return False
-
+        T = ord(i)
+        if not (97<=T<=122 or 65<=T<=90 or 48<=T<=57 or T == 95 or T == 45) :
+            return False
+    return True
 
 def register() :
         register_nama = input("Masukan nama: ")
